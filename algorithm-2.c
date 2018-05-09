@@ -1,8 +1,4 @@
 //最初のアルゴリズム授業の修正済みプログラム
-//++if(data > 0){
-//}else{
-//exit(0)
-//}
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -16,13 +12,18 @@ int main (void){
     CELL *root;
     CELL *p;
     scanf("%d",&data);
+//+++ if(data > 0){
 if(data > 0){
     root= (CELL*)malloc(sizeof(CELL));
     root -> value = data;
     root -> next = NULL;
+//+++ }else{
+//+++   exit(0);
+//+++  }
 }else{
     exit(0);
 }
+
     p = root;
     scanf("%d",&data);
     while(data > 0){

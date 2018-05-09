@@ -1,5 +1,5 @@
 //最初のアルゴリズム授業のプログラム
-//最初に数字以外を入れてもプログラムが実行されてしまうバグがある。
+//最初に数字以外を入れてもプログラムが実行されてしまう。
 //訂正はalgorithm-2.cに
 
 #include <stdio.h>
@@ -15,10 +15,13 @@ int main (void){
     CELL *p;
     scanf("%d",&data);
 
+//+++ if(data > 0){
     root= (CELL*)malloc(sizeof(CELL));
     root -> value = data;
     root -> next = NULL;
-
+//+++ }else{
+//+++    exit(1);
+//+++ }
     p = root;
     scanf("%d",&data);
     while(data > 0){
