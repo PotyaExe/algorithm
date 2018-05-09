@@ -12,16 +12,12 @@ int main (void){
     CELL *root;
     CELL *p;
     scanf("%d",&data);
-//+++ if(data > 0){
 if(data > 0){
     root= (CELL*)malloc(sizeof(CELL));
     root -> value = data;
     root -> next = NULL;
-//+++ }else{
-//+++   exit(0);
-//+++  }
 }else{
-    exit(0);
+    exit(1);
 }
 
     p = root;

@@ -1,6 +1,4 @@
-//授業2回目のアルゴリズム。
-//1つ目のセルは絶対に動的に確保してしまうので、1つ目の入力がWhileの条件に合わないものだったら意図と異なるリストができてしまう。
-//それを修正したのは、alogorithm-4.cに示す。
+//2回目の修正済みアルゴリズム。
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -8,6 +6,8 @@ typedef struct CELL{
     int value;
     struct CELL *next;
 } CELL;
+
+void free_next(CELL *p);
 
 int main(void){
     CELL root;
@@ -30,6 +30,12 @@ int main(void){
     for(;p!=NULL;p=p ->next){
         printf("%d\n",p->value);
     }
-    //freeにてリストを開放する。
+    free_next(root.next);
     return 0;
+}
+void free_next(CELL *p){
+    if(p->next!=NULL){
+        free_next(p->next);
+    }
+    free(p);
 }

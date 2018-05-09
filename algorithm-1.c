@@ -1,6 +1,6 @@
 //最初のアルゴリズム授業のプログラム
 //最初に数字以外を入れてもプログラムが実行されてしまう。
-//訂正はalgorithm-2.cに
+//訂正はalgorithm-2.cに。
 
 #include <stdio.h>
 #include <stdlib.h>
