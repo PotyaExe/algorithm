@@ -10,7 +10,7 @@ void printMenu(void);
 void myPrintList(CELL *p);
 CELL *myInsertCell(CELL *root);
 CELL *myDeleteCell(CELL *root);
-void myFreeList(CELL *root);
+void myFreeList(CELL *p);
 
 int main(void)
 {
@@ -42,8 +42,9 @@ int main(void)
 		scanf("%d", &item);
 	}
 
-	printf("\nBye!\n");
 	myFreeList(root);
+
+	printf("\nBye!\n");
 
 	return 0;
 }
@@ -56,13 +57,14 @@ void printMenu(void)
 
 void myPrintList(CELL *p)//1
 {
+    int i;
 	if ( p == NULL ) {
 		printf("\nRoot has no CELL!\n");
 		return;
 	}
-
-	for ( ; p != NULL; p = p->next) printf("%d ", p->value);
-	printf("\n");
+    printf("root->");
+	for (; p != NULL; p = p->next,i++) printf(" %d-> ",p->value);
+	printf("NULL\n");
 }
 
 CELL *myInsertCell(CELL *root)//2
@@ -97,14 +99,34 @@ CELL *myInsertCell(CELL *root)//2
 	}
 }
 
-CELL *myDeleteCell(CELL *root)//3　今のままだとすべてCELLが消えてしまう。
+CELL *myDeleteCell(CELL *root)//3
 {
-	return NULL;
+    CELL *p =root;
+    CELL *q;
+    int i,basyo;
+
+    printf("input basyo:");
+    scanf("%d",&basyo);
+
+    if(basyo==0){
+        root = root->next;
+    }else{
+        for(i=1;i<basyo;i++)p = p->next;
+        q = p->next;
+        p->next = p->next->next;
+        p = q;
+    }
+    free (p);
+
+    return root;
 }
 
-void myFreeList(CELL *root)//4 まだFreeできていない。
+void myFreeList(CELL *p)//4 再帰verのFree関数
 {
-
+    while(p!=NULL){
+        myFreeList(p->next);
+        free(p);
+    }
 }
 
 
