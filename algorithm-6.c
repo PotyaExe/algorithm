@@ -123,7 +123,7 @@ CELL *myDeleteCell(CELL *root)//3
 
 void myFreeList(CELL *p)//4 再帰verのFree関数
 {
-    while(p!=NULL){
+    if(p!=NULL){
         myFreeList(p->next);
         free(p);
     }
