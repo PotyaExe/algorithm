@@ -1,4 +1,4 @@
-//(11)
+ //(11)
 #include <stdio.h>
 void f(int a[2][3]);
 int main(void)

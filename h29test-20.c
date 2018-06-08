@@ -1,3 +1,4 @@
+//(20)
 #include <stdio.h>
 
 void push(int s[3], int *sp, int data);

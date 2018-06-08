@@ -1,3 +1,4 @@
+//(19)
 #include <stdio.h>
 
 void enq(int q[10], int *r, int data);

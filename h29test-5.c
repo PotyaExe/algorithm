@@ -1,3 +1,4 @@
+//(5)
 #include <stdio.h>
 
 typedef struct Point {

@@ -1,4 +1,4 @@
-//(10)
+ //(10)
 #include <stdio.h>
 void f(char str1[], char str2[]);
 int main(void)

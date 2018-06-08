@@ -1,3 +1,4 @@
+//(7)
 #include <stdio.h>
 void f(int *x,int *y);
 

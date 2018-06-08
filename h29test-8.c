@@ -1,3 +1,4 @@
+//(8)
 #include <stdio.h>
 int f(char str[]);
 int main(void)
