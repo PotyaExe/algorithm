@@ -1,0 +1,36 @@
+i*** Error in `./a.out': free(): invalid size: 0x00007ffe63f4d2b0 ***
+======= Backtrace: =========
+/lib/x86_64-linux-gnu/libc.so.6(+0x70bfb)[0x7f91245d6bfb]
+/lib/x86_64-linux-gnu/libc.so.6(+0x76fc6)[0x7f91245dcfc6]
+/lib/x86_64-linux-gnu/libc.so.6(+0x7780e)[0x7f91245dd80e]
+./a.out(+0xabe)[0x556966e29abe]
+./a.out(+0x8c8)[0x556966e298c8]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf1)[0x7f91245862e1]
+./a.out(+0x73a)[0x556966e2973a]
+======= Memory map: ========
+556966e29000-556966e2a000 r-xp 00000000 00:29 101400745                  /home/student/j16/j16432/j3exam0614/a.out
+55696702a000-55696702b000 r--p 00001000 00:29 101400745                  /home/student/j16/j16432/j3exam0614/a.out
+55696702b000-55696702c000 rw-p 00002000 00:29 101400745                  /home/student/j16/j16432/j3exam0614/a.out
+556967984000-5569679a5000 rw-p 00000000 00:00 0                          [heap]
+7f9120000000-7f9120021000 rw-p 00000000 00:00 0 
+7f9120021000-7f9124000000 ---p 00000000 00:00 0 
+7f912434f000-7f9124365000 r-xp 00000000 fe:02 915805                     /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f9124365000-7f9124564000 ---p 00016000 fe:02 915805                     /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f9124564000-7f9124565000 r--p 00015000 fe:02 915805                     /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f9124565000-7f9124566000 rw-p 00016000 fe:02 915805                     /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f9124566000-7f91246fb000 r-xp 00000000 fe:02 921936                     /lib/x86_64-linux-gnu/libc-2.24.so
+7f91246fb000-7f91248fb000 ---p 00195000 fe:02 921936                     /lib/x86_64-linux-gnu/libc-2.24.so
+7f91248fb000-7f91248ff000 r--p 00195000 fe:02 921936                     /lib/x86_64-linux-gnu/libc-2.24.so
+7f91248ff000-7f9124901000 rw-p 00199000 fe:02 921936                     /lib/x86_64-linux-gnu/libc-2.24.so
+7f9124901000-7f9124905000 rw-p 00000000 00:00 0 
+7f9124905000-7f9124928000 r-xp 00000000 fe:02 915747                     /lib/x86_64-linux-gnu/ld-2.24.so
+7f9124b09000-7f9124b0b000 rw-p 00000000 00:00 0 
+7f9124b24000-7f9124b28000 rw-p 00000000 00:00 0 
+7f9124b28000-7f9124b29000 r--p 00023000 fe:02 915747                     /lib/x86_64-linux-gnu/ld-2.24.so
+7f9124b29000-7f9124b2a000 rw-p 00024000 fe:02 915747                     /lib/x86_64-linux-gnu/ld-2.24.so
+7f9124b2a000-7f9124b2b000 rw-p 00000000 00:00 0 
+7ffe63f2e000-7ffe63f4f000 rw-p 00000000 00:00 0                          [stack]
+7ffe63f97000-7ffe63f99000 r--p 00000000 00:00 0                          [vvar]
+7ffe63f99000-7ffe63f9b000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+zsh: abort      ./a.out
