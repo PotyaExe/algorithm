@@ -41,8 +41,9 @@ void addNode(NODE **p, int data)
 {
 	while (*p != NULL) {
           if((*p)->value == data){
-             (*p) -> num  = (*p) ->num + 1;
-               return;
+            // (*p) -> num  = (*p) ->num + 1;
+             (*p) -> num++;
+                return;
           }
 		if ( data > (*p)->value ) {
 			p = &(*p)->right;
