@@ -47,9 +47,14 @@ void myInsertionSort(int a[],int  n)
 	int i, j, tmp;
 
 	for (i = 1; i < n; i++) {
+            j = i;
 
-		//You can write program here!
-		
+            while((j > 0) && (a[j] < a[j-1])){
+                        tmp = a[j-1];
+                        a[j-1] = a[j];
+                        a[j] = tmp;
 
+                        j--;
+                        }
 	}
 }
