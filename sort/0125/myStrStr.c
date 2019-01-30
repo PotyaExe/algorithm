@@ -23,9 +23,9 @@ int myStrStr(char s[], char t[])
 {
   int i, j;
   for (i = 0; s[i] != '\0'; i++) {
-    for (j = 0; s[i] == t[j]; i++, j++) {
+    for (j = 0; s[i+j] == t[j]; j++) {
       if (t[j + 1] == '\0') return 1;
-      if (s[i + 1] == '\0') return 0;
+      if (s[(i+j) + 1] == '\0') return 0;
     }
   } 
   return 0;
