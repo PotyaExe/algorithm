@@ -4,7 +4,6 @@
 typedef struct NODE {
 	struct NODE *left;
 	int value;
-	int num;
 	struct NODE *right;
 } NODE;
 
@@ -29,10 +28,10 @@ int main(void)
 	}
 	printf("\nYou've finished making bTree, so now we show you the data with inorders\n");
 
-	printf("\ninorder :\n");
+	printf("\ninorder : ");
 	inorder(root);
 
-	printf("\nBye!\n\n");
+	printf("\n\nBye!\n\n");
 		
 	return 0;
 }
@@ -40,10 +39,6 @@ int main(void)
 void addNode(NODE **p, int data)
 {
 	while (*p != NULL) {
-          if((*p)->value == data){
-             (*p) -> num  = (*p) ->num + 1;
-               return;
-          }
 		if ( data > (*p)->value ) {
 			p = &(*p)->right;
 		} else {
@@ -59,7 +54,6 @@ NODE *myAllocNode(int data)
 	NODE *p = (NODE *)malloc(sizeof(NODE));
 	
 	p->value = data;
-	p->num = 1;
 	p->left = p->right = NULL;
 	
 	return p;
@@ -68,8 +62,8 @@ NODE *myAllocNode(int data)
 void inorder(NODE *p)
 {
 	if ( p != NULL) {
-		inorder( p->left );
-		printf("value = %d, num = %d\n", p->value, p->num);
 		inorder( p->right );
+		printf("%d ", p->value);
+		inorder( p->left );
 	}
 }
